@@ -1,9 +1,23 @@
 <?php 
 
 	if(isset($_POST['submit'])){
-		echo htmlspecialchars($_POST['email']) . '<br />';
-		echo htmlspecialchars($_POST['title']) . '<br />';
-		echo htmlspecialchars($_POST['ingredients']) . '<br />';
+		if (empty($_POST['email'])) {
+			echo 'email is required <br />';
+		}else{
+			echo htmlspecialchars($_POST['email']) . '<br />';
+		}
+
+		if (empty($_POST['title'])) {
+			echo 'title is required <br />';
+		}else{
+			echo htmlspecialchars($_POST['title']) . '<br />';
+		}
+
+		if (empty($_POST['ingredients'])) {
+			echo 'at least one ingredient is required <br />';
+		}else{
+			echo htmlspecialchars($_POST['ingredients']) . '<br />';
+		}
 	}
 
 ?>
