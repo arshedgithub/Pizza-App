@@ -31,7 +31,7 @@
 		}
 
 		if (!array_filter($errors)) {
-			header('Location: index.php');
+			header('Location: index.php');	
 		}
 	}
 
